@@ -13,13 +13,25 @@ defmodule Example do
   end
 
   def main do
-    IO.puts("This\nis\nis\na\nmesaage\nfrom\nelixir\n")
-    IO.puts("After")
-    IO.puts(?a)
+    a = 10
+    b = 2.0
+    IO.puts(a+b)
+    c =3
+    IO.puts(a+c)
+    IO.puts(a / b )  #its always gives in floating point number
+    :io.format("~.20f\n", [0.1]) #Displaying floating floating point number in float with 20 decimal after a decimal point
+
+    IO.puts(Float.ceil(0.875 , 2))
+    IO.puts(Integer.gcd(3 , 10))
+
+    #Explore all the functions related to Integer  and Floats as an excersice
+
   end
 
   def interpolation do
-
+    IO.puts("This\nis\nis\na\nmesaage\nfrom\nelixir\n")
+    IO.puts("After")
+    IO.puts(?a)
   end
 
   def case_and_defaults do
