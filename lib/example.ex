@@ -9,11 +9,16 @@ defmodule Example do
     #IO.puts(hello())
     #IO.puts(Example.hello1())
     #IO.puts(Example.user_ID)
-    Supervisor.start_link([], strategy: :one_for_one)
+    Supervisor.start_link([], strategy: :one_for_one) #need for running directly form cmd prompt
   end
 
   def main do
+    IO.puts("This\nis\nis\na\nmesaage\nfrom\nelixir\n")
+    IO.puts("After")
+    IO.puts(?a)
+  end
 
+  def interpolation do
 
   end
 
