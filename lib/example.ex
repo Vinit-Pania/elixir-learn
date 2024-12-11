@@ -6,6 +6,7 @@ defmodule Example do
 
   def start(_type, _args)do
     Example.main()
+    Example.new_year_calculator()
     #IO.puts(hello())
     #IO.puts(Example.hello1())
     #IO.puts(Example.user_ID)
@@ -23,8 +24,29 @@ defmodule Example do
     #IO.inspect("Date and time is, #{date_new}") i dont know why its not working
     IO.inspect(date_new)
 
+    date_time = DateTime.new!(Date.new!(2024,1,1), Time.new!(0,0,0,0), "Etc/UTC")
+    IO.puts(date_time.utc_offset)
+    IO.inspect("Combination of Date and time is, #{date_time}")
+
+  end
+
+  def new_year_calculator do
     time = DateTime.new!(Date.new!(2024,1,1), Time.new!(0,0,0,0), "Etc/UTC")
-    IO.inspect("Combination of Date and time is, #{time}")
+    time_till = DateTime.diff(time, DateTime.utc_now())
+    IO.puts("Time remainning is #{time_till}")
+
+    days = time_till / 86_400
+    IO.puts("No of days #{days}")
+
+    hours =  div(rem(time_till , 86_400), 60 * 60 )
+    IO.puts("No of hours #{hours}")
+
+    minutes = div(rem(time_till, 60 * 60 ), 60)
+    IO.puts("Minutes is #{minutes}")
+
+    seconds = rem(time_till , 60)
+    IO.puts("Seconds are #{seconds}")
+
 
   end
 
