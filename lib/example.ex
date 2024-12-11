@@ -13,6 +13,22 @@ defmodule Example do
   end
 
   def main do
+
+    time = Time.new(16,30,30,0)
+    # IO.puts(time) --> will not wrok for multiple value
+    IO.inspect(time)
+
+    date_new=Date.new(2025,1,1)
+    #IO.inspect("Date is,#{date}" )
+    #IO.inspect("Date and time is, #{date_new}") i dont know why its not working
+    IO.inspect(date_new)
+
+    time = DateTime.new!(Date.new!(2024,1,1), Time.new!(0,0,0,0), "Etc/UTC")
+    IO.inspect("Combination of Date and time is, #{time}")
+
+  end
+
+  def integer_floats do
     a = 10
     b = 2.0
     IO.puts(a+b)
@@ -25,7 +41,6 @@ defmodule Example do
     IO.puts(Integer.gcd(3 , 10))
 
     #Explore all the functions related to Integer  and Floats as an excersice
-
   end
 
   def interpolation do
