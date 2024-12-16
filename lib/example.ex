@@ -14,7 +14,25 @@ defmodule Example do
   end
 
   def main do
+    memberships =  %{
+      gold: :gold,
+      silver: :silver,
+      bronze: :bronze,
+      none: :none
+    }
 
+    users = [
+      {"rahul", memberships.gold},
+      {"okarun", memberships.silver},
+      {"tsumugi", memberships.silver},
+      {"anya", memberships.none},
+      {"tanya", memberships.gold },
+      {"doe", memberships.silver}
+    ]
+
+    Enum.each(users, fn{name, memberships}->
+      IO.puts("#{name} has a #{memberships}")
+    end)
 
   end
 
