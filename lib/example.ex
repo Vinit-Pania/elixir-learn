@@ -14,7 +14,12 @@ defmodule Example do
   end
 
   def main do
-    memberships = {:bronze, :silver}
+
+
+
+  end
+  def  tuples_in do
+      memberships = {:bronze, :silver}
     IO.inspect(memberships)
     #Atoms does not accept puts
     memberships =  Tuple.append(memberships, :gold)
@@ -32,8 +37,6 @@ defmodule Example do
     {name, membership} = user1
     IO.puts("#{elem(user1, 0)} has a #{elem(user1, 1)} membership from elment matching")
     IO.puts("#{name} has a #{membership} membership from pattern matching ")
-
-
   end
 
   def basic_date_time do
