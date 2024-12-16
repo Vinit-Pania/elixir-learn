@@ -30,8 +30,8 @@ defmodule Example do
     #store individual instances
     user1 = {"bint" ,  :gold}
     {name, membership} = user1
-    IO.puts("#{elem(user1, 0)} has a #{elem(user1, 1)} membership")
-    IO.puts("#{name} has a #{membership} membership ")
+    IO.puts("#{elem(user1, 0)} has a #{elem(user1, 1)} membership from elment matching")
+    IO.puts("#{name} has a #{membership} membership from pattern matching ")
 
 
   end
