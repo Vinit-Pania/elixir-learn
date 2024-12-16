@@ -16,7 +16,20 @@ defmodule Example do
   def main do
 
 
+  end
 
+  def lists_is_used_as do
+    users = [
+      {"rahul", :gold},
+      {"okarun", :silver},
+      {"tsumugi", :gold},
+      {"anya", :bronze},
+      {"tanya", :gold },
+      {"doe", :silver}
+    ]
+    Enum.each(users, fn {name, membership} ->
+      IO.puts("#{name} has a #{membership}.")
+    end)
   end
   def  tuples_in do
       memberships = {:bronze, :silver}
